@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Register yourself with HTB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Enter your first name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter your last name "
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+    <EditText
+        android:id="@+id/create_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter your E-mail address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/last_name"
+        app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+    <EditText
+        android:id="@+id/create_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Create password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/create_email"
+        app:layout_constraintTop_toBottomOf="@+id/create_email" />
+
+    <ImageView
+        android:id="@+id/show_pass_btn1"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="8dp"
+        android:alpha=".5"
+        android:onClick="showhidebtn1"
+        android:padding="5dp"
+        android:src="@drawable/hide_pass_foreground"
+        app:layout_constraintStart_toStartOf="@+id/create_pass"
+        app:layout_constraintTop_toBottomOf="@+id/create_email" />
+
+    <EditText
+        android:id="@+id/confirm_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Confirm your password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/create_pass"
+        app:layout_constraintTop_toBottomOf="@+id/create_pass" />
+
+    <ImageView
+        android:id="@+id/show_pass_btn2"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="12dp"
+        android:alpha=".5"
+        android:onClick="showhidebtn2"
+        android:padding="5dp"
+        android:src="@drawable/hide_pass_foreground"
+        app:layout_constraintStart_toStartOf="@+id/confirm_pass"
+        app:layout_constraintTop_toBottomOf="@+id/create_pass" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="nextbtn"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="@+id/confirm_pass"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_pass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
